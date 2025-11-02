@@ -63,14 +63,16 @@ const getTotalSets = (session: { exercises: { sets: unknown[] }[] }) => {
     <div v-else class="sessions-container">
       <div v-for="session in sortedSessions" :key="session.id" class="session-card">
         <div class="session-header">
-          <div class="session-date-info">
-            <h2>{{ formatDate(session.date) }}</h2>
-            <p class="session-time">
-              {{ formatTime(session.startTime) }}
-              <span v-if="session.endTime"> - {{ formatTime(session.endTime) }}</span>
-            </p>
-            <p class="session-duration">Duration: {{ getDuration(session) }}</p>
-          </div>
+          <router-link :to="`/session/${session.id}`" class="session-link">
+            <div class="session-date-info">
+              <h2>{{ formatDate(session.date) }}</h2>
+              <p class="session-time">
+                {{ formatTime(session.startTime) }}
+                <span v-if="session.endTime"> - {{ formatTime(session.endTime) }}</span>
+              </p>
+              <p class="session-duration">Duration: {{ getDuration(session) }}</p>
+            </div>
+          </router-link>
           <button @click="deleteSession(session.id)" class="btn-delete" aria-label="Delete session">
             ×
           </button>
@@ -146,6 +148,16 @@ header h1 {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
+}
+
+.session-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.session-link:hover .session-date-info h2 {
+  color: var(--color-primary);
 }
 
 .session-date-info h2 {

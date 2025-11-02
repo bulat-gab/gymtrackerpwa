@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useSessionsStore } from '@/stores/sessions'
 
+const router = useRouter()
 const store = useSessionsStore()
 
 const currentDate = ref(new Date())
@@ -73,6 +75,17 @@ const isToday = (dateString: string) => {
 const getSessionsForDate = (dateString: string) => {
   return store.sessionsByDate[dateString] || []
 }
+
+const handleDateClick = (item: { day: number; date: string; hasSession: boolean }) => {
+  if (item.hasSession && item.day > 0) {
+    const sessions = getSessionsForDate(item.date)
+    const firstSession = sessions[0]
+    if (firstSession) {
+      // Navigate to the first session's details page
+      router.push(`/session/${firstSession.id}`)
+    }
+  }
+}
 </script>
 
 <template>
@@ -107,7 +120,9 @@ const getSessionsForDate = (dateString: string) => {
             'has-session': item.hasSession,
             today: isToday(item.date),
             empty: item.day === 0,
+            clickable: item.hasSession && item.day > 0,
           }"
+          @click="handleDateClick(item)"
         >
           <span v-if="item.day > 0" class="day-number">{{ item.day }}</span>
         </div>
@@ -229,6 +244,11 @@ header h1 {
 
 .calendar-day:hover:not(.empty) {
   background: var(--color-background-soft);
+}
+
+.calendar-day.clickable:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 .calendar-day.empty {

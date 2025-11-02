@@ -210,6 +210,31 @@ export const useSessionsStore = defineStore('sessions', () => {
     }
   }
 
+  // Get session by ID
+  const getSessionById = (sessionId: number): GymSession | undefined => {
+    return sessions.value.find((s) => s.id === sessionId)
+  }
+
+  // Update a completed session
+  const updateSession = (sessionId: number, updates: Partial<GymSession>) => {
+    const index = sessions.value.findIndex((s) => s.id === sessionId)
+    if (index !== -1) {
+      const currentSession = sessions.value[index]
+      if (currentSession) {
+        // Ensure id is preserved and required fields are present
+        sessions.value[index] = {
+          ...currentSession,
+          ...updates,
+          id: sessionId, // Ensure id is always present
+          date: updates.date ?? currentSession.date,
+          startTime: updates.startTime ?? currentSession.startTime,
+          exercises: updates.exercises ?? currentSession.exercises,
+        }
+        saveSessions()
+      }
+    }
+  }
+
   // Get sessions grouped by date
   const sessionsByDate = computed(() => {
     const grouped: Record<string, GymSession[]> = {}
@@ -248,6 +273,8 @@ export const useSessionsStore = defineStore('sessions', () => {
     finishSession,
     cancelSession,
     deleteSession,
+    getSessionById,
+    updateSession,
     importSessions,
     loadSessions,
     saveSessions,

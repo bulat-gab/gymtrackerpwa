@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../views/SessionsListView.vue'),
     },
     {
+      path: '/session/:id',
+      name: 'session-details',
+      component: () => import('../views/SessionDetailsView.vue'),
+    },
+    {
       path: '/calendar',
       name: 'calendar',
       component: () => import('../views/CalendarView.vue'),
