@@ -14,7 +14,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix --cache",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "generate-icons": "node scripts/generate-icons.js"
   },
   "dependencies": {
     "pinia": "^3.0.3",
@@ -37,10 +38,13 @@
     "jsdom": "^27.0.1",
     "npm-run-all2": "^8.0.4",
     "prettier": "3.6.2",
+    "sharp": "^0.34.4",
     "typescript": "~5.9.0",
     "vite": "^7.1.11",
+    "vite-plugin-pwa": "^1.1.0",
     "vite-plugin-vue-devtools": "^8.0.3",
     "vitest": "^3.2.4",
-    "vue-tsc": "^3.1.1"
+    "vue-tsc": "^3.1.1",
+    "workbox-window": "^7.3.0"
   }
 }
