@@ -1,17 +1,15 @@
+import { v4 as uuidv4 } from 'uuid'
 import { SessionType } from './types'
 
 export interface PredefinedExercise {
-  id: string // Constant ID for the exercise (generated from name)
+  id: string
   name: string
-  types: SessionType[] // Exercises can belong to multiple types
+  types: SessionType[]
 }
 
-// Generate ID from exercise name: "Leg Press" -> "leg_press"
+// Generate UUID for exercises
 export const generateExerciseId = (name: string): string => {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '_')
-    .replace(/^_|_$/g, '')
+  return uuidv4()
 }
 
 // prettier-ignore
