@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useSessionsStore } from '@/stores/sessions'
 import type { ExerciseSet } from '@/stores/types'
@@ -10,17 +10,37 @@ const store = useSessionsStore()
 
 const newExerciseName = ref('')
 const showAddExercise = ref(false)
+const currentTime = ref(new Date())
 
 const sessionDuration = computed(() => {
-  if (!store.activeSession) return '0:00'
+  if (!store.activeSession) return '0:00:00'
 
   const start = new Date(store.activeSession.startTime)
-  const now = new Date()
+  const now = currentTime.value
   const diff = Math.floor((now.getTime() - start.getTime()) / 1000)
 
-  const minutes = Math.floor(diff / 60)
+  const hours = Math.floor(diff / 3600)
+  const minutes = Math.floor((diff % 3600) / 60)
   const seconds = diff % 60
+
+  if (hours > 0) {
+    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+  }
   return `${minutes}:${seconds.toString().padStart(2, '0')}`
+})
+
+let intervalId: number | null = null
+
+onMounted(() => {
+  intervalId = window.setInterval(() => {
+    currentTime.value = new Date()
+  }, 1000)
+})
+
+onUnmounted(() => {
+  if (intervalId !== null) {
+    clearInterval(intervalId)
+  }
 })
 
 const addExercise = () => {
