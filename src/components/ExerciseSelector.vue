@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { getExercisesByType, getAllExerciseNames } from '@/stores/exercises'
+import { predefinedExercises } from '@/stores/exercises'
 import type { SessionType } from '@/stores/types'
 
 const props = defineProps<{
@@ -17,16 +17,31 @@ const searchQuery = ref('')
 const showDropdown = ref(false)
 
 const filteredExercises = computed(() => {
-  let exercises = props.sessionType
-    ? getExercisesByType(props.sessionType).map((ex) => ex.name)
-    : getAllExerciseNames()
+  // Get all exercises and sort them so matching exercises come first
+  let exercises = [...predefinedExercises]
 
-  if (searchQuery.value.trim()) {
-    const query = searchQuery.value.toLowerCase()
-    exercises = exercises.filter((name) => name.toLowerCase().includes(query))
+  // Sort: matching exercises first, then others
+  if (props.sessionType) {
+    exercises.sort((a, b) => {
+      const aMatches = a.types.includes(props.sessionType!)
+      const bMatches = b.types.includes(props.sessionType!)
+
+      if (aMatches && !bMatches) return -1
+      if (!aMatches && bMatches) return 1
+      return 0 // Keep original order for exercises in the same category
+    })
   }
 
-  return exercises.slice(0, 10) // Limit to 10 results
+  // Extract names
+  let exerciseNames = exercises.map((ex) => ex.name)
+
+  // Apply search filter if present
+  if (searchQuery.value.trim()) {
+    const query = searchQuery.value.toLowerCase()
+    exerciseNames = exerciseNames.filter((name) => name.toLowerCase().includes(query))
+  }
+
+  return exerciseNames
 })
 
 const selectExercise = (exerciseName: string) => {
