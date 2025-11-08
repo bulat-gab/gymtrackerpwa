@@ -12,3 +12,5 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+// PWA service worker registration is handled by vite-plugin-pwa
