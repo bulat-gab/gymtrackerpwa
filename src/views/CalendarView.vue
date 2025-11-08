@@ -30,7 +30,10 @@ const daysInMonth = computed(() => {
 })
 
 const firstDayOfMonth = computed(() => {
-  return new Date(currentYear.value, currentMonth.value, 1).getDay()
+  // Convert from Sunday-first (0=Sunday) to Monday-first (0=Monday)
+  // Formula: (getDay() + 6) % 7
+  const dayOfWeek = new Date(currentYear.value, currentMonth.value, 1).getDay()
+  return (dayOfWeek + 6) % 7
 })
 
 const calendarDays = computed(() => {
@@ -103,7 +106,7 @@ const handleDateClick = (item: { day: number; date: string; hasSession: boolean 
     <div class="calendar">
       <div class="calendar-header">
         <div
-          v-for="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']"
+          v-for="day in ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']"
           :key="day"
           class="day-name"
         >
