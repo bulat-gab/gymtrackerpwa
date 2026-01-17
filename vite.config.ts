@@ -1,13 +1,44 @@
 import { fileURLToPath, URL } from 'node:url'
+import { execSync } from 'node:child_process'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa'
 
+// Get git commit information
+const getGitCommitHash = () => {
+  try {
+    return execSync('git rev-parse --short HEAD').toString().trim()
+  } catch {
+    return 'unknown'
+  }
+}
+
+const getGitCommitMessage = () => {
+  try {
+    return execSync('git log -1 --pretty=%s').toString().trim()
+  } catch {
+    return 'unknown'
+  }
+}
+
+const getGitCommitDate = () => {
+  try {
+    return execSync('git log -1 --pretty=%cI').toString().trim()
+  } catch {
+    return 'unknown'
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   base: process.env.VITE_BASE || '/',
+  define: {
+    __GIT_COMMIT_HASH__: JSON.stringify(getGitCommitHash()),
+    __GIT_COMMIT_MESSAGE__: JSON.stringify(getGitCommitMessage()),
+    __BUILD_DATE__: JSON.stringify(getGitCommitDate()),
+  },
   plugins: [
     vue(),
     vueDevTools(),

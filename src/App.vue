@@ -23,6 +23,9 @@ const showNav = computed(() => route.name !== 'active-session')
       <RouterLink to="/calendar" class="nav-link" :class="{ active: route.name === 'calendar' }">
         Calendar
       </RouterLink>
+      <RouterLink to="/settings" class="nav-link" :class="{ active: route.name === 'settings' }">
+        Settings
+      </RouterLink>
     </nav>
 
     <main>
