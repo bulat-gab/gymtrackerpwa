@@ -36,7 +36,7 @@ export interface Exercise {
 }
 
 export interface GymSession {
-  id: number
+  id: string
   date: string // ISO date string
   startTime: string // ISO datetime string
   endTime?: string // ISO datetime string

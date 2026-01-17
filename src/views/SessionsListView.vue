@@ -38,7 +38,7 @@ const getDuration = (session: { startTime: string; endTime?: string }) => {
   return `${minutes}m`
 }
 
-const deleteSession = (sessionId: number) => {
+const deleteSession = (sessionId: string) => {
   if (confirm('Delete this session? This action cannot be undone.')) {
     store.deleteSession(sessionId)
   }

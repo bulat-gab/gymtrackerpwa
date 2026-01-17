@@ -7,44 +7,14 @@ import { getExerciseId } from './exercises'
 
 const STORAGE_KEY = 'gymtracker-sessions'
 const ACTIVE_SESSION_KEY = 'gymtracker-active-session'
-const SESSION_ID_COUNTER_KEY = 'gymtracker-session-id-counter'
 
 export const useSessionsStore = defineStore('sessions', () => {
   const sessions = ref<GymSession[]>([])
   const activeSession = ref<GymSession | null>(null)
 
-  // Get next session ID (incremental integer starting from 0)
-  const getNextSessionId = (): number => {
-    try {
-      const stored = localStorage.getItem(SESSION_ID_COUNTER_KEY)
-      const counter = stored ? parseInt(stored, 10) : -1
-      const nextCounter = counter + 1
-      localStorage.setItem(SESSION_ID_COUNTER_KEY, nextCounter.toString())
-      return nextCounter
-    } catch (error) {
-      console.error('Failed to get next session ID:', error)
-      // Fallback - use timestamp mod a large number to avoid conflicts
-      return Date.now() % 1000000
-    }
-  }
-
-  // Initialize ID counters based on existing sessions
-  const initializeIdCounters = () => {
-    try {
-      // Initialize session counter
-      const sessionCounterStored = localStorage.getItem(SESSION_ID_COUNTER_KEY)
-      if (!sessionCounterStored) {
-        let maxSessionId = -1
-        sessions.value.forEach((session) => {
-          if (typeof session.id === 'number' && session.id > maxSessionId) {
-            maxSessionId = session.id
-          }
-        })
-        localStorage.setItem(SESSION_ID_COUNTER_KEY, maxSessionId.toString())
-      }
-    } catch (error) {
-      console.error('Failed to initialize ID counters:', error)
-    }
+  // Generate a unique session ID using UUID v4
+  const generateSessionId = (): string => {
+    return crypto.randomUUID()
   }
 
   // Load sessions from localStorage
@@ -58,8 +28,6 @@ export const useSessionsStore = defineStore('sessions', () => {
           ...session,
           sessionType: session.sessionType ? (session.sessionType as SessionType) : undefined,
         }))
-        // Initialize counters after loading sessions
-        initializeIdCounters()
       }
     } catch (error) {
       console.error('Failed to load sessions:', error)
@@ -111,7 +79,7 @@ export const useSessionsStore = defineStore('sessions', () => {
     // Check if it's legacy format and convert if needed
     if (isLegacyFormat(importedData)) {
       convertedSessions = importedData.map((legacy) =>
-        convertLegacySession(legacy, getNextSessionId),
+        convertLegacySession(legacy, generateSessionId),
       )
     } else if (Array.isArray(importedData)) {
       // Assume it's already in the new format
@@ -124,32 +92,19 @@ export const useSessionsStore = defineStore('sessions', () => {
     const existingIds = new Set(sessions.value.map((s) => s.id))
     const newSessions = convertedSessions.filter((s) => !existingIds.has(s.id))
 
-    // For imported sessions, assign new incremental IDs if they conflict
-    const importedWithNewIds = newSessions.map((session) => {
-      if (typeof session.id === 'number' && !existingIds.has(session.id)) {
-        // Already has proper integer ID and doesn't conflict, keep it
-        return session
-      }
-      // Generate new incremental ID
-      const newSessionId = getNextSessionId()
-      // Also update exercise IDs if needed (convert to string IDs from names)
-      const exercisesWithNewIds = session.exercises.map((exercise) => ({
+    // Ensure all exercise IDs are strings
+    const importedWithCleanIds = newSessions.map((session) => ({
+      ...session,
+      exercises: session.exercises.map((exercise) => ({
         ...exercise,
         id: typeof exercise.id === 'string' ? exercise.id : getExerciseId(exercise.name),
-      }))
-      return {
-        ...session,
-        id: newSessionId,
-        exercises: exercisesWithNewIds,
-      }
-    })
+      })),
+    }))
 
-    sessions.value = [...sessions.value, ...importedWithNewIds].sort(
+    sessions.value = [...sessions.value, ...importedWithCleanIds].sort(
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     )
 
-    // Re-initialize counters after import to ensure they're up to date
-    initializeIdCounters()
     saveSessions()
   }
 
@@ -159,7 +114,7 @@ export const useSessionsStore = defineStore('sessions', () => {
     const dateStr = now.toISOString().split('T')[0] || now.toISOString().substring(0, 10)
     const startTime = now.toISOString()
     activeSession.value = {
-      id: getNextSessionId(),
+      id: generateSessionId(),
       date: dateStr,
       startTime,
       sessionType,
@@ -239,7 +194,7 @@ export const useSessionsStore = defineStore('sessions', () => {
   }
 
   // Delete a completed session
-  const deleteSession = (sessionId: number) => {
+  const deleteSession = (sessionId: string) => {
     const index = sessions.value.findIndex((s) => s.id === sessionId)
     if (index !== -1) {
       sessions.value.splice(index, 1)
@@ -248,12 +203,12 @@ export const useSessionsStore = defineStore('sessions', () => {
   }
 
   // Get session by ID
-  const getSessionById = (sessionId: number): GymSession | undefined => {
+  const getSessionById = (sessionId: string): GymSession | undefined => {
     return sessions.value.find((s) => s.id === sessionId)
   }
 
   // Update a completed session
-  const updateSession = (sessionId: number, updates: Partial<GymSession>) => {
+  const updateSession = (sessionId: string, updates: Partial<GymSession>) => {
     const index = sessions.value.findIndex((s) => s.id === sessionId)
     if (index !== -1) {
       const currentSession = sessions.value[index]

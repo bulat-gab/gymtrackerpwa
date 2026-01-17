@@ -18,7 +18,7 @@ const showAddExercise = ref(false)
 const newExerciseName = ref('')
 
 onMounted(() => {
-  const sessionId = parseInt(route.params.id as string, 10)
+  const sessionId = route.params.id as string
   const session = store.getSessionById(sessionId)
   if (!session) {
     router.push('/sessions')

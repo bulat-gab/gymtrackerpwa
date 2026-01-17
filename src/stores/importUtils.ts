@@ -26,7 +26,7 @@ export interface LegacySession {
 // Convert legacy format to new format
 export const convertLegacySession = (
   legacy: LegacySession,
-  getNextSessionId: () => number,
+  generateSessionId: () => string,
 ): GymSession => {
   const startDate = new Date(legacy.StartTime)
   const endDate = new Date(legacy.EndTime)
@@ -72,7 +72,7 @@ export const convertLegacySession = (
   }
 
   return {
-    id: getNextSessionId(),
+    id: generateSessionId(),
     date: dateStr,
     startTime: startDate.toISOString(),
     endTime: endDate.toISOString(),
