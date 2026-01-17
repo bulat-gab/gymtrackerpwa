@@ -1,4 +1,6 @@
 # Gym Tracker PWA
+[![Deploy to GitHub Pages](https://github.com/bulat-gab/gymtrackerpwa/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/bulat-gab/gymtrackerpwa/actions/workflows/deploy.yml)
+
 https://bulat-gab.github.io/gymtrackerpwa/
 
 A Progressive Web App for tracking gym sessions and workouts. Built with Vue 3, TypeScript, and Pinia.
