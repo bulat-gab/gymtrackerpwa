@@ -6,6 +6,7 @@ import { isLegacyFormat, convertLegacySession } from './importUtils'
 import { getExerciseId } from './exercises'
 
 const STORAGE_KEY = 'gymtracker-sessions'
+const ACTIVE_SESSION_KEY = 'gymtracker-active-session'
 const SESSION_ID_COUNTER_KEY = 'gymtracker-session-id-counter'
 
 export const useSessionsStore = defineStore('sessions', () => {
@@ -74,6 +75,35 @@ export const useSessionsStore = defineStore('sessions', () => {
     }
   }
 
+  // Save active session to localStorage
+  const saveActiveSession = () => {
+    try {
+      if (activeSession.value) {
+        localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(activeSession.value))
+      } else {
+        localStorage.removeItem(ACTIVE_SESSION_KEY)
+      }
+    } catch (error) {
+      console.error('Failed to save active session:', error)
+    }
+  }
+
+  // Load active session from localStorage
+  const loadActiveSession = () => {
+    try {
+      const stored = localStorage.getItem(ACTIVE_SESSION_KEY)
+      if (stored) {
+        const loaded = JSON.parse(stored) as GymSession
+        activeSession.value = {
+          ...loaded,
+          sessionType: loaded.sessionType ? (loaded.sessionType as SessionType) : undefined,
+        }
+      }
+    } catch (error) {
+      console.error('Failed to load active session:', error)
+    }
+  }
+
   // Import sessions from JSON (for importing old data)
   const importSessions = (importedData: unknown) => {
     let convertedSessions: GymSession[]
@@ -135,6 +165,7 @@ export const useSessionsStore = defineStore('sessions', () => {
       sessionType,
       exercises: [],
     }
+    saveActiveSession()
   }
 
   // Add exercise to active session
@@ -147,6 +178,7 @@ export const useSessionsStore = defineStore('sessions', () => {
       sets: [],
     }
     activeSession.value.exercises.push(exercise)
+    saveActiveSession()
   }
 
   // Add set to exercise
@@ -159,6 +191,7 @@ export const useSessionsStore = defineStore('sessions', () => {
     const exercise = activeSession.value.exercises.find((e) => e.id === exerciseId)
     if (exercise) {
       exercise.sets.push(set)
+      saveActiveSession()
     }
   }
 
@@ -169,6 +202,7 @@ export const useSessionsStore = defineStore('sessions', () => {
     const exercise = activeSession.value.exercises.find((e) => e.id === exerciseId)
     if (exercise) {
       exercise.sets.splice(setIndex, 1)
+      saveActiveSession()
     }
   }
 
@@ -179,6 +213,7 @@ export const useSessionsStore = defineStore('sessions', () => {
     const index = activeSession.value.exercises.findIndex((e) => e.id === exerciseId)
     if (index !== -1) {
       activeSession.value.exercises.splice(index, 1)
+      saveActiveSession()
     }
   }
 
@@ -193,12 +228,14 @@ export const useSessionsStore = defineStore('sessions', () => {
 
     const finished = activeSession.value
     activeSession.value = null
+    saveActiveSession()
     return finished
   }
 
   // Cancel active session
   const cancelSession = () => {
     activeSession.value = null
+    saveActiveSession()
   }
 
   // Delete a completed session
@@ -258,6 +295,7 @@ export const useSessionsStore = defineStore('sessions', () => {
 
   // Initialize: load from localStorage
   loadSessions()
+  loadActiveSession()
 
   return {
     sessions,
