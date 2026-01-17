@@ -1,0 +1,2084 @@
+[
+    {
+        "Id": 81,
+        "StartTime": "2026-01-16T17:00:00",
+        "EndTime": "2026-01-16T18:02:23.919+08:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:02:23.9190000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 80,
+        "StartTime": "2026-01-14T17:11:28.072+08:00",
+        "EndTime": "2026-01-14T18:07:13.97+08:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "00:55:45.8980000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 79,
+        "StartTime": "2026-01-13T17:00:00",
+        "EndTime": "2026-01-13T18:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 78,
+        "StartTime": "2026-01-12T17:00:00",
+        "EndTime": "2026-01-12T18:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 77,
+        "StartTime": "2026-01-09T16:58:15.074+08:00",
+        "EndTime": "2026-01-09T18:18:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:19:44.9260000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 76,
+        "StartTime": "2026-01-08T17:00:00",
+        "EndTime": "2026-01-08T18:12:20.081+08:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:12:20.0810000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 75,
+        "StartTime": "2026-01-07T17:00:00",
+        "EndTime": "2026-01-07T18:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 74,
+        "StartTime": "2026-01-06T08:00:00",
+        "EndTime": "2026-01-06T10:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "02:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 73,
+        "StartTime": "2026-01-05T08:00:00",
+        "EndTime": "2026-01-05T09:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 72,
+        "StartTime": "2026-01-04T09:00:00",
+        "EndTime": "2026-01-04T10:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 71,
+        "StartTime": "2025-12-29T08:00:00",
+        "EndTime": "2025-12-29T09:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 70,
+        "StartTime": "2025-12-24T08:00:00",
+        "EndTime": "2025-12-24T09:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 69,
+        "StartTime": "2025-12-23T09:00:00",
+        "EndTime": "2025-12-23T10:00:00",
+        "Notes": null,
+        "SessionType": 32,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 68,
+        "StartTime": "2025-12-22T20:33:13.803+08:00",
+        "EndTime": "2025-12-22T22:00:54.949+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:27:41.1460000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 67,
+        "StartTime": "2025-12-17T21:21:17.711+08:00",
+        "EndTime": "2025-12-17T22:53:08.182+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 2,
+                "Reps": 5,
+                "Weight": 90,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:31:50.4710000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 66,
+        "StartTime": "2025-12-17T00:12:44.857+08:00",
+        "EndTime": "2025-12-17T01:37:19.658+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lunges",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:24:34.8010000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 65,
+        "StartTime": "2025-12-12T21:53:57.657+08:00",
+        "EndTime": "2025-12-12T23:09:36.056+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Tricep Pushdown",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:15:38.3990000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 64,
+        "StartTime": "2025-12-11T19:00:00",
+        "EndTime": "2025-12-11T20:00:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 63,
+        "StartTime": "2025-12-09T19:33:00",
+        "EndTime": "2025-12-09T21:40:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [],
+        "Duration": "02:07:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 62,
+        "StartTime": "2025-12-09T00:21:38.715+08:00",
+        "EndTime": "2025-12-09T02:40:31.803+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Leg Press",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Calf Raises",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Quad Extension",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:18:53.0880000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 61,
+        "StartTime": "2025-12-02T19:34:00",
+        "EndTime": "2025-12-02T21:41:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [],
+        "Duration": "02:07:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 60,
+        "StartTime": "2025-12-01T00:41:22.306+08:00",
+        "EndTime": "2025-12-01T02:33:41.39+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Deadlift",
+                "Sets": 4,
+                "Reps": 6,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:52:19.0840000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 59,
+        "StartTime": "2025-11-28T01:00:05.768+08:00",
+        "EndTime": "2025-11-28T02:26:44.901+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Dips",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:26:39.1330000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 58,
+        "StartTime": "2025-11-25T23:55:04.364+08:00",
+        "EndTime": "2025-11-26T01:37:40.974+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lunges",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:42:36.6100000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 57,
+        "StartTime": "2025-11-17T20:55:14.76+08:00",
+        "EndTime": "2025-11-17T22:33:57.499+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Barbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Tricep Pushdown",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:38:42.7390000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 56,
+        "StartTime": "2025-11-15T21:56:45.492+08:00",
+        "EndTime": "2025-11-15T23:32:04.42+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:35:18.9280000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 55,
+        "StartTime": "2025-11-13T20:08:35.616+08:00",
+        "EndTime": "2025-11-13T21:07:09.246+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "00:58:33.6300000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 54,
+        "StartTime": "2025-11-11T19:51:52.696+08:00",
+        "EndTime": "2025-11-11T21:29:50.561+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:37:57.8650000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 53,
+        "StartTime": "2025-11-10T21:29:55.186+08:00",
+        "EndTime": "2025-11-10T23:07:15.677+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Incline Barbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Tricep Pushdown",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:37:20.4910000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 52,
+        "StartTime": "2025-11-08T21:47:08.645+08:00",
+        "EndTime": "2025-11-08T23:17:52.807+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:30:44.1620000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 51,
+        "StartTime": "2025-11-01T19:03:36.053+08:00",
+        "EndTime": "2025-11-01T20:26:30.34+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Barbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Push Ups",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:22:54.2870000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 50,
+        "StartTime": "2025-10-30T21:31:59.721+08:00",
+        "EndTime": "2025-10-30T23:05:02.497+08:00",
+        "Notes": null,
+        "SessionType": 512,
+        "Exercises": [],
+        "Duration": "01:33:02.7760000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 49,
+        "StartTime": "2025-10-28T17:13:03.807+08:00",
+        "EndTime": "2025-10-28T19:12:23.816+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Leg Press",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Calf Raises",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:59:20.0090000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 48,
+        "StartTime": "2025-10-27T21:26:24.846+08:00",
+        "EndTime": "2025-10-27T22:38:55.63+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 1,
+                "Reps": 3,
+                "Weight": 90,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:12:30.7840000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 47,
+        "StartTime": "2025-10-25T18:28:48.072+08:00",
+        "EndTime": "2025-10-25T21:12:28.892+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Deadlift",
+                "Sets": 4,
+                "Reps": 6,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:43:40.8200000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 46,
+        "StartTime": "2025-10-22T19:45:56.739+08:00",
+        "EndTime": "2025-10-22T21:24:36.69+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 1,
+                "Reps": 6,
+                "Weight": 30,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 8,
+                "Weight": 17.5,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:38:39.9510000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 45,
+        "StartTime": "2025-10-20T20:32:20.523+08:00",
+        "EndTime": "2025-10-20T21:41:44.184+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:09:23.6610000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 44,
+        "StartTime": "2025-10-19T15:40:36.118+08:00",
+        "EndTime": "2025-10-19T17:18:42.416+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 80,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Barbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Dips",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:38:06.2980000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 43,
+        "StartTime": "2025-10-18T19:34:11.763+08:00",
+        "EndTime": "2025-10-18T20:43:01.33+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Deadlift",
+                "Sets": 4,
+                "Reps": 6,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:08:49.5670000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 42,
+        "StartTime": "2025-10-08T19:20:06.125+08:00",
+        "EndTime": "2025-10-08T21:08:27.422+08:00",
+        "Notes": null,
+        "SessionType": 512,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Tricep Pushdown",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Dips",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chin Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:48:21.2970000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 41,
+        "StartTime": "2025-10-07T20:58:28.249+08:00",
+        "EndTime": "2025-10-07T22:17:16.554+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Leg Press",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:18:48.3050000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 40,
+        "StartTime": "2025-10-06T21:58:35.705+08:00",
+        "EndTime": "2025-10-06T23:32:29.728+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:33:54.0230000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 39,
+        "StartTime": "2025-10-04T21:27:45.078+08:00",
+        "EndTime": "2025-10-04T22:34:44.057+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:06:58.9790000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 38,
+        "StartTime": "2025-10-03T14:56:59.051+08:00",
+        "EndTime": "2025-10-03T16:17:52.906+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 6,
+                "Weight": 100,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Calf Raises",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 60,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:20:53.8550000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 37,
+        "StartTime": "2025-10-02T20:19:50.641+08:00",
+        "EndTime": "2025-10-02T21:39:05.75+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Tricep Pushdown",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:19:15.1090000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 36,
+        "StartTime": "2025-09-26T20:48:37.409+08:00",
+        "EndTime": "2025-09-26T21:49:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [],
+        "Duration": "",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 35,
+        "StartTime": "2025-09-21T18:45:00",
+        "EndTime": "2025-09-21T20:31:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [],
+        "Duration": "01:46:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 34,
+        "StartTime": "2025-09-15T21:41:06.937+08:00",
+        "EndTime": "2025-09-15T23:13:10.353+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Front Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 7,
+                "Weight": 12,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:32:03.4160000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 33,
+        "StartTime": "2025-09-12T19:55:31.31+08:00",
+        "EndTime": "2025-09-12T20:55:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [],
+        "Duration": "-01:00:31.3100000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 32,
+        "StartTime": "2025-09-11T23:38:49.707+08:00",
+        "EndTime": "2025-09-12T00:41:41.761+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:02:52.0540000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 31,
+        "StartTime": "2025-09-09T21:41:45.517+08:00",
+        "EndTime": "2025-09-09T23:52:30.091+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 6,
+                "Weight": 80,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Barbell Press",
+                "Sets": 1,
+                "Reps": 5,
+                "Weight": 60,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:10:44.5740000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 30,
+        "StartTime": "2025-09-05T23:27:01.337+08:00",
+        "EndTime": "2025-09-06T01:12:23.319+08:00",
+        "Notes": null,
+        "SessionType": 128,
+        "Exercises": [],
+        "Duration": "01:45:21.9820000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 29,
+        "StartTime": "2025-08-27T23:03:08.851+08:00",
+        "EndTime": "2025-08-28T01:06:28.752+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:03:19.9010000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 28,
+        "StartTime": "2025-08-24T19:01:27.992+08:00",
+        "EndTime": "2025-08-24T21:21:22.084+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Deadlift",
+                "Sets": 2,
+                "Reps": 4,
+                "Weight": 138,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:19:54.0920000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 27,
+        "StartTime": "2025-08-20T18:11:14.714+08:00",
+        "EndTime": "2025-08-20T19:21:28.609+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 1,
+                "Reps": 2,
+                "Weight": 100,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 1,
+                "Reps": 4,
+                "Weight": 30,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:10:13.8950000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 26,
+        "StartTime": "2025-08-17T21:09:06.677+08:00",
+        "EndTime": "2025-08-17T23:07:59.853+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 4,
+                "Weight": 120,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Calf Raises",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Quad Extension",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:58:53.1760000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 25,
+        "StartTime": "2025-08-14T00:59:09.64+08:00",
+        "EndTime": "2025-08-14T02:24:38.411+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:25:28.7710000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 24,
+        "StartTime": "2025-08-12T00:25:48.859+08:00",
+        "EndTime": "2025-08-12T02:01:36.193+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lat Pulldown",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:35:47.3340000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 23,
+        "StartTime": "2025-08-05T23:31:06.569+08:00",
+        "EndTime": "2025-08-06T01:05:27.58+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 80,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 2,
+                "Reps": 5,
+                "Weight": 26,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:34:21.0110000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 22,
+        "StartTime": "2025-07-30T23:56:50.1+08:00",
+        "EndTime": "2025-07-31T02:25:54.162+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Sumo Deadlift",
+                "Sets": 3,
+                "Reps": 4,
+                "Weight": 120,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:29:04.0620000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 21,
+        "StartTime": "2025-07-29T00:25:06.863+08:00",
+        "EndTime": "2025-07-29T01:35:12.666+08:00",
+        "Notes": null,
+        "SessionType": 128,
+        "Exercises": [],
+        "Duration": "01:10:05.8030000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 20,
+        "StartTime": "2025-07-22T23:37:29.412+08:00",
+        "EndTime": "2025-07-23T01:48:35.755+08:00",
+        "Notes": null,
+        "SessionType": 128,
+        "Exercises": [],
+        "Duration": "02:11:06.3430000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 19,
+        "StartTime": "2025-07-16T23:56:35.741+08:00",
+        "EndTime": "2025-07-17T01:19:38.825+08:00",
+        "Notes": null,
+        "SessionType": 128,
+        "Exercises": [],
+        "Duration": "01:23:03.0840000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 18,
+        "StartTime": "2025-07-13T00:40:50.159+08:00",
+        "EndTime": "2025-07-13T02:01:48.463+08:00",
+        "Notes": null,
+        "SessionType": 128,
+        "Exercises": [],
+        "Duration": "01:20:58.3040000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 17,
+        "StartTime": "2025-07-07T22:00:35.988+08:00",
+        "EndTime": "2025-07-07T23:20:48.868+08:00",
+        "Notes": null,
+        "SessionType": 128,
+        "Exercises": [],
+        "Duration": "01:20:12.8800000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 16,
+        "StartTime": "2025-06-30T23:19:35.339+08:00",
+        "EndTime": "2025-07-01T00:20:31.857+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [],
+        "Duration": "01:00:56.5180000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 15,
+        "StartTime": "2025-06-25T00:40:37.279+08:00",
+        "EndTime": "2025-06-25T01:56:41.544+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 6,
+                "Weight": 85,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 36,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Incline Barbell Press",
+                "Sets": 3,
+                "Reps": 8,
+                "Weight": 45,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:16:04.2650000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 14,
+        "StartTime": "2025-06-22T23:44:09.881+08:00",
+        "EndTime": "2025-06-23T01:48:42.321+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Front Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Barbell Overhead Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Deadlift",
+                "Sets": 4,
+                "Reps": 6,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:04:32.4400000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 13,
+        "StartTime": "2025-06-20T23:33:43.394+08:00",
+        "EndTime": "2025-06-21T01:00:35.522+08:00",
+        "Notes": null,
+        "SessionType": 512,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Hammer Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bicep Curl",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Tricep Pushdown",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:26:52.1280000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 12,
+        "StartTime": "2025-06-18T00:34:24.862+08:00",
+        "EndTime": "2025-06-18T01:47:31.628+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Quad Extension",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Hamstring Curls",
+                "Sets": 4,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Calf Raises",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:13:06.7660000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 11,
+        "StartTime": "2025-06-16T23:21:30.591+08:00",
+        "EndTime": "2025-06-17T00:36:56.031+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Incline Dumbbell Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chest Fly",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Barbell Bench Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Dips",
+                "Sets": 3,
+                "Reps": 15,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:15:25.4400000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 10,
+        "StartTime": "2025-06-16T02:00:31.341+08:00",
+        "EndTime": "2025-06-16T03:06:54.795+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Bent Over Row",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:06:23.4540000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 9,
+        "StartTime": "2025-06-11T22:40:40.186+08:00",
+        "EndTime": "2025-06-11T23:37:18.17+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [],
+        "Duration": "00:56:37.9840000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 8,
+        "StartTime": "2025-06-10T20:37:40.166+08:00",
+        "EndTime": "2025-06-10T22:55:35.119+08:00",
+        "Notes": null,
+        "SessionType": 1,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Squat",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Leg Press",
+                "Sets": 4,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "02:17:54.9530000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 7,
+        "StartTime": "2025-06-05T21:38:27.506+08:00",
+        "EndTime": "2025-06-05T23:42:00.95+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [],
+        "Duration": "02:03:33.4440000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 6,
+        "StartTime": "2025-06-04T20:31:01.273+08:00",
+        "EndTime": "2025-06-04T22:12:29.083+08:00",
+        "Notes": null,
+        "SessionType": 4,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Pull Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Deadlift",
+                "Sets": 4,
+                "Reps": 6,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Chin Ups",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Seated Cable Row",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:41:27.8100000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 1,
+        "StartTime": "2025-05-30T22:24:16.49+08:00",
+        "EndTime": "2025-05-30T23:24:27.379+08:00",
+        "Notes": null,
+        "SessionType": 8,
+        "Exercises": [
+            {
+                "Id": 0,
+                "Name": "Seated DB Press",
+                "Sets": 3,
+                "Reps": 10,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Rear Delt Fly",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            },
+            {
+                "Id": 0,
+                "Name": "Lateral Raise",
+                "Sets": 3,
+                "Reps": 12,
+                "Weight": 0,
+                "Notes": null
+            }
+        ],
+        "Duration": "01:00:10.8890000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 2,
+        "StartTime": "2025-05-28T19:34:00",
+        "EndTime": "2025-05-28T20:34:00",
+        "Notes": null,
+        "SessionType": 512,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 3,
+        "StartTime": "2025-05-26T20:44:19.498+08:00",
+        "EndTime": "2025-05-26T22:08:30.277+08:00",
+        "Notes": null,
+        "SessionType": 2,
+        "Exercises": [],
+        "Duration": "01:24:10.7790000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 4,
+        "StartTime": "2025-05-23T23:58:54.884+08:00",
+        "EndTime": "2025-05-24T00:52:36.461+08:00",
+        "Notes": "Short session before hiking",
+        "SessionType": 1,
+        "Exercises": [],
+        "Duration": "00:53:41.5770000",
+        "SchemaVersion": 0
+    },
+    {
+        "Id": 5,
+        "StartTime": "2025-05-22T16:00:00",
+        "EndTime": "2025-05-22T17:00:00",
+        "Notes": "Deadlift 135 kg\nPull ups bw\nHorizontal pull\n",
+        "SessionType": 4,
+        "Exercises": [],
+        "Duration": "01:00:00",
+        "SchemaVersion": 0
+    }
+]
