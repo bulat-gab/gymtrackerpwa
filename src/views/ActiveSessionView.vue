@@ -52,12 +52,11 @@ const addExercise = () => {
 }
 
 const finishSession = () => {
-  if (store.activeSession && store.activeSession.exercises.length > 0) {
-    store.finishSession()
-    router.push('/')
-  } else {
-    alert('Add at least one exercise before finishing the session')
-  }
+  if (!store.activeSession)
+    return;
+  
+  store.finishSession()
+  router.push('/')
 }
 
 const cancelSession = () => {
@@ -200,11 +199,7 @@ const updateSet = (
 
       <!-- Finish Button -->
       <div class="finish-section">
-        <button
-          @click="finishSession"
-          class="btn btn-primary btn-large"
-          :disabled="store.activeSession.exercises.length === 0"
-        >
+        <button @click="finishSession" class="btn btn-primary btn-large">
           Finish Session
         </button>
       </div>
