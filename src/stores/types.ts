@@ -8,6 +8,7 @@ export enum SessionType {
   Core = 'core',
   Cardio = 'cardio',
   FullBody = 'fullBody',
+  CrossFit = 'crossFit',
 }
 
 // Helper to validate and convert string to SessionType

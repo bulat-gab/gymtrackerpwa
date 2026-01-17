@@ -64,6 +64,7 @@ export const convertLegacySession = (
     if (type & 4) return SessionType.Back // Back
     if (type & 8) return SessionType.Shoulders // Shoulders
     if (type & 16) return SessionType.Core // Core
+    if (type & 32) return SessionType.CrossFit
     if (type & 64) return SessionType.Cardio // Cardio
     if (type & 128) return SessionType.FullBody // FullBody
     if (type & 512) return SessionType.Arms // Arms
