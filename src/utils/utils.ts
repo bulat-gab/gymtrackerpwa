@@ -1,9 +1,15 @@
 /**
+ * Converts a Date object to YYYY-MM-DD format
+ */
+export const dateToISODateString = (date: Date): string => {
+  return date.toISOString().split('T')[0] || ''
+}
+
+/**
  * Formats an ISO date string to YYYY-MM-DD format
  */
-export const formatDate = (dateString: string): string => {
-  const date = new Date(dateString)
-  return date.toISOString().split('T')[0] || ''
+export const formatISODate = (dateString: string): string => {
+  return dateString.split('T')[0] || ''
 }
 
 /**
@@ -22,6 +28,31 @@ export const formatDateTime = (dateTimeString: string): string => {
 }
 
 /**
+ * Formats an ISO date string to a localized long date format
+ * Example: "January 15, 2026"
+ */
+export const formatDateLong = (dateString: string): string => {
+  const date = new Date(dateString)
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+}
+
+/**
+ * Formats an ISO datetime string to localized time format
+ * Example: "02:30 PM"
+ */
+export const formatTime = (timeString: string): string => {
+  const date = new Date(timeString)
+  return date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+}
+
+/**
  * Calculates duration between start and end time
  * Returns formatted string like "2h 30m" or "45m"
  */
@@ -36,4 +67,18 @@ export const getDuration = (startTime: string, endTime?: string): string => {
     return `${hours}h ${minutes}m`
   }
   return `${minutes}m`
+}
+
+/**
+ * Gets today's date in YYYY-MM-DD format
+ */
+export const getTodayDateString = (): string => {
+  return new Date().toISOString().split('T')[0] || ''
+}
+
+/**
+ * Checks if a given date string matches today's date
+ */
+export const isToday = (dateString: string): boolean => {
+  return dateString === getTodayDateString()
 }

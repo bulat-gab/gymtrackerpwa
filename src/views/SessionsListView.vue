@@ -1,42 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useSessionsStore } from '@/stores/sessions'
+import { formatDateLong, formatTime, getDuration } from '@/utils/utils'
 
 const store = useSessionsStore()
 
 const sortedSessions = computed(() => {
   return [...store.sessions].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 })
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString)
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
-
-const formatTime = (timeString: string) => {
-  const date = new Date(timeString)
-  return date.toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-  })
-}
-
-const getDuration = (session: { startTime: string; endTime?: string }) => {
-  if (!session.endTime) return 'N/A'
-  const start = new Date(session.startTime)
-  const end = new Date(session.endTime)
-  const diff = Math.floor((end.getTime() - start.getTime()) / 1000 / 60)
-  const hours = Math.floor(diff / 60)
-  const minutes = diff % 60
-  if (hours > 0) {
-    return `${hours}h ${minutes}m`
-  }
-  return `${minutes}m`
-}
 
 const deleteSession = (sessionId: string) => {
   if (confirm('Delete this session? This action cannot be undone.')) {
@@ -65,12 +36,12 @@ const getTotalSets = (session: { exercises: { sets: unknown[] }[] }) => {
         <div class="session-header">
           <router-link :to="`/session/${session.id}`" class="session-link">
             <div class="session-date-info">
-              <h2>{{ formatDate(session.date) }}</h2>
+              <h2>{{ formatDateLong(session.date) }}</h2>
               <p class="session-time">
                 {{ formatTime(session.startTime) }}
                 <span v-if="session.endTime"> - {{ formatTime(session.endTime) }}</span>
               </p>
-              <p class="session-duration">Duration: {{ getDuration(session) }}</p>
+              <p class="session-duration">Duration: {{ getDuration(session.startTime, session.endTime) }}</p>
             </div>
           </router-link>
           <button @click="deleteSession(session.id)" class="btn-delete" aria-label="Delete session">

@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useSessionsStore } from '@/stores/sessions'
+import { dateToISODateString, isToday } from '@/utils/utils'
 
 const router = useRouter()
 const store = useSessionsStore()
@@ -47,7 +48,7 @@ const calendarDays = computed(() => {
   // Days of the month
   for (let day = 1; day <= daysInMonth.value; day++) {
     const date = new Date(currentYear.value, currentMonth.value, day)
-    const dateString = date.toISOString().split('T')[0] || date.toISOString().substring(0, 10)
+    const dateString = dateToISODateString(date)
     days.push({
       day,
       date: dateString,
@@ -68,11 +69,6 @@ const nextMonth = () => {
 
 const goToToday = () => {
   currentDate.value = new Date()
-}
-
-const isToday = (dateString: string) => {
-  const today = new Date().toISOString().split('T')[0]
-  return dateString === today
 }
 
 const getSessionsForDate = (dateString: string) => {
