@@ -5,6 +5,7 @@ import { useSessionsStore } from '@/stores/sessions'
 import type { Exercise, ExerciseSet, GymSession } from '@/stores/types'
 import { SessionType } from '@/stores/types'
 import { getExerciseId } from '@/stores/exercises'
+import { formatDate, formatDateTime, getDuration as calculateDuration } from '@/utils/utils'
 import ExerciseSelector from '@/components/ExerciseSelector.vue'
 import SessionTypeSelector from '@/views/SessionTypeSelector.vue'
 
@@ -30,27 +31,9 @@ onMounted(() => {
 
 const session = computed(() => editedSession.value)
 
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString)
-  return date.toISOString().split('T')[0] || ''
-}
-
-const formatDateTime = (dateTimeString: string) => {
-  const date = new Date(dateTimeString)
-  return date.toISOString().slice(0, 16) // Format: YYYY-MM-DDTHH:mm
-}
-
-const getDuration = computed(() => {
-  if (!session.value || !session.value.endTime) return 'N/A'
-  const start = new Date(session.value.startTime)
-  const end = new Date(session.value.endTime)
-  const diff = Math.floor((end.getTime() - start.getTime()) / 1000 / 60)
-  const hours = Math.floor(diff / 60)
-  const minutes = diff % 60
-  if (hours > 0) {
-    return `${hours}h ${minutes}m`
-  }
-  return `${minutes}m`
+const duration = computed(() => {
+  if (!session.value) return 'N/A'
+  return calculateDuration(session.value.startTime, session.value.endTime)
 })
 
 const startEdit = () => {
@@ -108,12 +91,16 @@ const updateDate = (field: 'date' | 'startTime' | 'endTime', value: string) => {
       editedSession.value.endTime = endDateTime.toISOString()
     }
   } else {
+    // Convert local datetime-local input value to ISO string (UTC)
+    const localDate = new Date(value)
+    const isoString = localDate.toISOString()
+
     if (field === 'endTime') {
-      editedSession.value.endTime = value
+      editedSession.value.endTime = isoString
     } else if (field === 'startTime') {
-      editedSession.value.startTime = value
-      // value is guaranteed to be a string (function parameter)
-      editedSession.value.date = formatDate(value)
+      editedSession.value.startTime = isoString
+      // Update date field to match startTime
+      editedSession.value.date = formatDate(isoString)
     }
   }
 }
@@ -251,7 +238,7 @@ const deleteSession = () => {
         <!-- Duration -->
         <div class="info-row">
           <label>Duration</label>
-          <span>{{ getDuration }}</span>
+          <span>{{ duration }}</span>
         </div>
 
         <!-- Session Type -->
