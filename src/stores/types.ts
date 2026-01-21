@@ -21,6 +21,28 @@ export const toSessionType = (value: unknown): SessionType | undefined => {
   return isValidSessionType(value) ? value : undefined
 }
 
+// Get all session types with labels in display order
+export const getSessionTypesWithLabels = (): Array<{ value: SessionType; label: string }> => {
+  return [
+    { value: SessionType.Legs, label: 'Legs' },
+    { value: SessionType.Chest, label: 'Chest' },
+    { value: SessionType.Back, label: 'Back' },
+    { value: SessionType.Arms, label: 'Arms' },
+    { value: SessionType.Shoulders, label: 'Shoulders' },
+    { value: SessionType.Core, label: 'Core' },
+    { value: SessionType.Cardio, label: 'Cardio' },
+    { value: SessionType.FullBody, label: 'Full Body' },
+    { value: SessionType.CrossFit, label: 'CrossFit' },
+    { value: SessionType.Mixed, label: 'Mixed' },
+  ]
+}
+
+// Get display label for a session type
+export const getSessionTypeLabel = (type: SessionType): string => {
+  const types = getSessionTypesWithLabels()
+  return types.find((t) => t.value === type)?.label || type
+}
+
 export interface ExerciseSet {
   reps?: number
   weight?: number

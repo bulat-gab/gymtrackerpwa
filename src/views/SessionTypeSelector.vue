@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SessionType } from '@/stores/types'
+import { SessionType, getSessionTypesWithLabels } from '@/stores/types'
 
 const props = defineProps<{
   selectedType?: SessionType
@@ -9,17 +9,7 @@ const emit = defineEmits<{
   (e: 'select', type: SessionType | undefined): void
 }>()
 
-const sessionTypes = [
-  { value: SessionType.Legs, label: 'Legs' },
-  { value: SessionType.Chest, label: 'Chest' },
-  { value: SessionType.Back, label: 'Back' },
-  { value: SessionType.Arms, label: 'Arms' },
-  { value: SessionType.Shoulders, label: 'Shoulders' },
-  { value: SessionType.Core, label: 'Core' },
-  { value: SessionType.Cardio, label: 'Cardio' },
-  { value: SessionType.FullBody, label: 'Full Body' },
-  { value: SessionType.Mixed, label: 'Mixed' },
-]
+const sessionTypes = getSessionTypesWithLabels()
 </script>
 
 <template>
