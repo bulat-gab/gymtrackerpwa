@@ -30,7 +30,6 @@ export const convertLegacySession = (
 ): GymSession => {
   const startDate = new Date(legacy.StartTime)
   const endDate = new Date(legacy.EndTime)
-  const dateStr = startDate.toISOString().split('T')[0] || startDate.toISOString().substring(0, 10)
 
   // Convert exercises: old format has Sets/Reps/Weight as single values (all sets same)
   // Handle empty exercises array (legacy sessions with no exercises)
@@ -74,7 +73,6 @@ export const convertLegacySession = (
 
   return {
     id: generateSessionId(),
-    date: dateStr,
     startTime: startDate.toISOString(),
     endTime: endDate.toISOString(),
     sessionType: mapLegacySessionType(legacy.SessionType),
