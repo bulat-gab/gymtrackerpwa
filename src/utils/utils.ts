@@ -1,8 +1,18 @@
 /**
- * Converts a Date object to YYYY-MM-DD format
+ * Converts a Date object to YYYY-MM-DD format in UTC timezone
  */
 export const dateToISODateString = (date: Date): string => {
   return date.toISOString().split('T')[0] || ''
+}
+
+/**
+ * Converts a Date object to YYYY-MM-DD format in local timezone
+ */
+export const dateToLocalDateString = (date: Date): string => {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
 }
 
 /**
@@ -10,6 +20,14 @@ export const dateToISODateString = (date: Date): string => {
  */
 export const formatISODate = (dateString: string): string => {
   return dateString.split('T')[0] || ''
+}
+
+/**
+ * Extracts the local date from an ISO datetime string
+ * Converts the datetime to local timezone first, then returns YYYY-MM-DD
+ */
+export const getLocalDateFromISOString = (isoString: string): string => {
+  return dateToLocalDateString(new Date(isoString))
 }
 
 /**
@@ -70,10 +88,10 @@ export const getDuration = (startTime: string, endTime?: string): string => {
 }
 
 /**
- * Gets today's date in YYYY-MM-DD format
+ * Gets today's date in YYYY-MM-DD format in local timezone
  */
 export const getTodayDateString = (): string => {
-  return new Date().toISOString().split('T')[0] || ''
+  return dateToLocalDateString(new Date())
 }
 
 /**

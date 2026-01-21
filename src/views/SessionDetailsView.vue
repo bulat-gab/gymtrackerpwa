@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useSessionsStore } from '@/stores/sessions'
 import type { Exercise, ExerciseSet, GymSession } from '@/stores/types'
-import { SessionType } from '@/stores/types'
+import { SessionType, getSessionDate } from '@/stores/types'
 import { getExerciseId } from '@/stores/exercises'
 import { formatISODate, formatDateTime, getDuration as calculateDuration } from '@/utils/utils'
 import ExerciseSelector from '@/components/ExerciseSelector.vue'
@@ -63,11 +63,7 @@ const saveChanges = () => {
     return
   }
 
-  // Update the date field to match startTime
   if (!editedSession.value) return
-
-  // startTime is always required in GymSession interface
-  editedSession.value.date = formatISODate(editedSession.value.startTime as string)
 
   store.updateSession(editedSession.value.id, editedSession.value)
   isEditing.value = false
@@ -99,8 +95,6 @@ const updateDate = (field: 'date' | 'startTime' | 'endTime', value: string) => {
       editedSession.value.endTime = isoString
     } else if (field === 'startTime') {
       editedSession.value.startTime = isoString
-      // Update date field to match startTime
-      editedSession.value.date = formatISODate(isoString)
     }
   }
 }
@@ -200,11 +194,11 @@ const deleteSession = () => {
           <input
             v-if="isEditing"
             type="date"
-            :value="formatISODate(session.date)"
+            :value="formatISODate(getSessionDate(session))"
             @input="(e) => updateDate('date', (e.target as HTMLInputElement).value)"
             class="input"
           />
-          <span v-else>{{ new Date(session.date).toLocaleDateString() }}</span>
+          <span v-else>{{ new Date(getSessionDate(session)).toLocaleDateString() }}</span>
         </div>
 
         <!-- Start Time -->

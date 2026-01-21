@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useSessionsStore } from '@/stores/sessions'
+import { getSessionDate } from '@/stores/types'
 import { formatDateLong, formatTime, getDuration } from '@/utils/utils'
 
 const store = useSessionsStore()
 
 const sortedSessions = computed(() => {
-  return [...store.sessions].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  return [...store.sessions].sort((a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime())
 })
 
 const deleteSession = (sessionId: string) => {
@@ -36,7 +37,7 @@ const getTotalSets = (session: { exercises: { sets: unknown[] }[] }) => {
         <div class="session-header">
           <router-link :to="`/session/${session.id}`" class="session-link">
             <div class="session-date-info">
-              <h2>{{ formatDateLong(session.date) }}</h2>
+              <h2>{{ formatDateLong(getSessionDate(session)) }}</h2>
               <p class="session-time">
                 {{ formatTime(session.startTime) }}
                 <span v-if="session.endTime"> - {{ formatTime(session.endTime) }}</span>

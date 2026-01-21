@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import type { GymSession } from './types'
-import { SessionType } from './types'
+import { SessionType, getSessionDate } from './types'
 import { isLegacyFormat, convertLegacySession } from './importUtils'
 import { getExerciseId } from './exercises'
 
@@ -102,7 +102,7 @@ export const useSessionsStore = defineStore('sessions', () => {
     }))
 
     sessions.value = [...sessions.value, ...importedWithCleanIds].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+      (a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime(),
     )
 
     saveSessions()
@@ -111,11 +111,9 @@ export const useSessionsStore = defineStore('sessions', () => {
   // Start a new session
   const startSession = (sessionType?: SessionType) => {
     const now = new Date()
-    const dateStr = now.toISOString().split('T')[0] || now.toISOString().substring(0, 10)
     const startTime = now.toISOString()
     activeSession.value = {
       id: generateSessionId(),
-      date: dateStr,
       startTime,
       sessionType,
       exercises: [],
@@ -178,7 +176,7 @@ export const useSessionsStore = defineStore('sessions', () => {
 
     activeSession.value.endTime = new Date().toISOString()
     sessions.value.unshift(activeSession.value)
-    sessions.value.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    sessions.value.sort((a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime())
     saveSessions()
 
     const finished = activeSession.value
@@ -218,7 +216,6 @@ export const useSessionsStore = defineStore('sessions', () => {
           ...currentSession,
           ...updates,
           id: sessionId, // Ensure id is always present
-          date: updates.date ?? currentSession.date,
           startTime: updates.startTime ?? currentSession.startTime,
           exercises: updates.exercises ?? currentSession.exercises,
         }
@@ -231,7 +228,7 @@ export const useSessionsStore = defineStore('sessions', () => {
   const sessionsByDate = computed(() => {
     const grouped: Record<string, GymSession[]> = {}
     sessions.value.forEach((session) => {
-      const date = session.date
+      const date = getSessionDate(session)
       if (!grouped[date]) {
         grouped[date] = []
       }
@@ -242,7 +239,7 @@ export const useSessionsStore = defineStore('sessions', () => {
 
   // Get dates with sessions (for calendar)
   const datesWithSessions = computed(() => {
-    return new Set(sessions.value.map((s) => s.date))
+    return new Set(sessions.value.map((s) => getSessionDate(s)))
   })
 
   // Get total sessions count
